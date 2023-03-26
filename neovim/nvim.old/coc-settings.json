@@ -1,0 +1,10 @@
+{
+  "snippets.ultisnips.pythonPrompt": false,
+  "coc.preferences.formatOnSaveFiletypes": ["py", "yaml", "json"],
+  "python.liniting.flake8Enabled": true,
+  "python.formatting.provider": "black",
+  "go.goplsOptions": {
+    "completionBudget": "100ms",
+    "completeUnimported": true
+  }
+}
