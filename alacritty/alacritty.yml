@@ -456,6 +456,10 @@ shell:
     - options
     - --default-shell
     - /usr/local/bin/nu 
+    - --session-name
+    - "dev-science"
+    - --attach-to-session
+    - "true"
 
 # Startup directory
 #
