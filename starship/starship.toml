@@ -10,6 +10,9 @@ $line_break\
 $python\
 $character"""
 
+command_timeout = 10_000
+scan_timeout = 10_000
+
 [battery]
 full_symbol = "🔋"
 charging_symbol = "🔌"
