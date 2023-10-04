@@ -1,6 +1,3 @@
-[submodule "nvim"]
-	path = nvim
-	url = git@github.com:d4rkwinz/nvim.git
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
