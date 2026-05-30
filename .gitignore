@@ -1,11 +1,20 @@
-configstore/*
-fish/*
-gatsby/*
-gcloud/*
-yarn/*
-medusa/*
-evans/*
-github-copilot/*
-wireshark/*
-zed/conversations/*
-zed/.tmp*
+configstore/
+fish/
+gatsby/
+gcloud/
+yarn/
+medusa/
+evans/
+wireshark/
+
+# Exercism
+exercism/
+
+# GH
+gh/
+
+# Solana
+solana/
+
+# Common
+*log*
