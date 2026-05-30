@@ -1,47 +1,48 @@
 # dotfiles
 
+Personal `~/.config` — terminals, editor, shell prompt, and git defaults.
+Lives directly at `$XDG_CONFIG_HOME`, so most tools pick up their config with zero symlinks.
 
-## Submodule
+## What's inside
 
-```
-# Periodically run to update submodules to latest version
-git submodule update --init --remote
-```
+| Path             | Tool                | Purpose                          |
+| ---------------- | ------------------- | -------------------------------- |
+| `alacritty/`     | Alacritty           | GPU terminal                     |
+| `ghostty/`       | Ghostty             | GPU terminal                     |
+| `cmux/`          | cmux                | terminal for parallel AI agents  |
+| `zellij/`        | Zellij              | terminal multiplexer             |
+| `nvim/`          | Neovim (LazyVim)    | editor — git submodule           |
+| `starship/`      | Starship            | shell prompt                     |
+| `git/ignore`     | git                 | global ignore (auto-loaded)      |
+| `gitconfig/custom` | git               | aliases (needs include, below)   |
 
-## Nerd Font
-* [JetBrains font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
+## Setup
 
-### Install
-
-```
-brew install neovim
-
-ln -s $PWD ~/.config/nvim
-```
-
-### Language Server Protocol Implementations
-
-* [Go: gopls](https://github.com/golang/tools/tree/master/gopls)
-```
-go install golang.org/x/tools/gopls@latest
+```sh
+git clone --recurse-submodules git@github.com:d4rkwinz/dotfiles.git ~/.config
 ```
 
-* [Python](https://github.com/microsoft/pyright)
+Already cloned without submodules:
 
-```
-brew install pyright
-```
-
-## GitConfig
-
-```
-git config --edit --global
-
+```sh
+git -C ~/.config submodule update --init --recursive
 ```
 
-Add this line
+Update the nvim submodule to its latest:
 
+```sh
+git -C ~/.config submodule update --remote nvim
 ```
+
+### git aliases
+
+`git/ignore` loads automatically (XDG default). To enable `gitconfig/custom`, add to `~/.gitconfig`:
+
+```ini
 [include]
-  path = ~/path/to/custom/config
+    path = ~/.config/gitconfig/custom
 ```
+
+### Font
+
+[JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts) — `brew install --cask font-jetbrains-mono-nerd-font`
