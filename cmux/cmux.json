@@ -2,6 +2,38 @@
   "$schema": "https://raw.githubusercontent.com/manaflow-ai/cmux/main/web/data/cmux.schema.json",
   "schemaVersion": 1,
 
+  // ── Active settings (managed in dotfiles) ─────────────────────────────
+  // Tuned for parallel Claude Code agentic coding.
+  // Full option reference is in the commented template below.
+  "automation": {
+    "claudeCodeIntegration": true,
+    "claudeBinaryPath": "",
+    "socketControlMode": "cmuxOnly",
+    "suppressSubagentNotifications": true
+  },
+  "terminal": {
+    "autoResumeAgentSessions": true
+  },
+  "notifications": {
+    "unreadPaneRing": true,
+    "paneFlash": true,
+    "dockBadge": true,
+    "sound": "default",
+    "showInMenuBar": true
+  },
+  "sidebar": {
+    "watchGitStatus": true,
+    "showPullRequests": true,
+    "showPorts": true,
+    "showProgress": true,
+    "showNotificationMessage": true
+  },
+  "browser": {
+    "openPortLinksInCmuxBrowser": true,
+    "interceptTerminalOpenCommandInCmuxBrowser": true
+  }
+
+  // ── Reference template (commented = falls back to in-app Settings) ────
   // This file uses JSON with comments (JSONC).
   // Uncomment and edit any setting to make it file-managed.
   // Remove a setting to fall back to the value saved in Settings.
